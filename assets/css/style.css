@@ -2,11 +2,23 @@
     background-color: #3d2f24;
 }
 
+.bg-blue {
+    background-color: #9dc7f4;
+}
+
 .bg-green {
+    background-color: #344722;
+}
+
+.bg-lgreen {
     background-color: #9acf95;
     height: 30px;
 }
 
 .nav-text {
     color: #9acf95;
+}
+
+.hidden {
+    display: none;
 }
