@@ -1,3 +1,5 @@
+/*-----------------------------------Colors*/
+
 .bg-brown {
     background-color: #3d2f24;
 }
@@ -15,6 +17,13 @@
     height: 30px;
 }
 
+/*-----------------------------------Fonts*/
+.main-font {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4rem;
+}
+
+/*-----------------------------------Navbar*/
 .nav-text {
     color: #9acf95;
 }
