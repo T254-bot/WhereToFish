@@ -24,7 +24,6 @@
 /*-----------------------------------Fonts*/
 .main-font {
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.4rem;
 }
 
 .sec-font {
@@ -75,10 +74,20 @@
 
 .sign-up-header {
     width: 100%;
-    margin: 15% 0 22% 0;
-    font-size: 150%;
+    margin: 15% 0 2% 0;
+    font-size: 400%;
     font-weight: 600;
     text-align: center;
+    color: #3d2f24;
+}
+
+.sign-up-message {
+    margin-bottom: 15%;
+    padding: 0 5% 0 5%;
+    text-align: center;
+    font-size: 130%;
+    font-weight: 600;
+    color: #2f4f20;
 }
 
 .sign-up-inputs {
@@ -92,13 +101,15 @@
 
 .sign-up-pw {
     width: 70%;
-    margin:20% 0 0 15%;
+    margin: 5% 0 0 15%;
 }
 
 .sign-up-submit {
     margin-top: 10%;
     margin-left: 40%;
     width: 20%;
+    background-color: #3d2f24;
+    color: #9acf95;
 }
 
 /*------------------------------------Sign In*/
@@ -155,6 +166,7 @@
 }
 
 @media (min-width: 992px) {
+    /*------------------------------Jumbo*/
     .main-jumbo {
         margin-top: 5%;
         margin-bottom: 20%;
@@ -165,5 +177,29 @@
         font-family:'Tilt Neon', sans-serif;
         font-size: 500%;
         margin-bottom: 5px;
+    }
+    /*------------------------------Sign Up*/
+
+    .sign-up-header {
+        margin: 5% 0 2% 0;
+    }
+    
+    .sign-up-message {
+        margin-bottom: 8%;
+    }
+    
+    .sign-up-un {
+        width: 50%;
+        margin-left: 25%;
+    }
+    
+    .sign-up-pw {
+        width: 50%;
+        margin: 2% 0 0 25%;
+    }
+    
+    .sign-up-submit {
+        margin: 3% 0 15% 45%;
+        width: 10%;
     }
 }
