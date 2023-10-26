@@ -142,6 +142,31 @@
     width: 20%;
 }
 
+/*------------------------------------Account*/
+
+.account-header {
+    font-size: 225%;
+    color: #9acf95;
+    margin: 5% 0 8% 0;
+}
+
+.favorites-header {
+    font-size: 150%;
+    color: #9acf95;
+    margin: 0 0 3% 5%;
+}
+
+.favorites-box {
+    background-color: darkgray;
+    width: 80%;
+    margin: 0 0 0 10%;
+    border-style: solid;
+    padding: 2%;
+}
+
+.fav-info {
+    font-size: 105%;
+}
 /*------------------------------------Footer*/
 
 .footer-body {
