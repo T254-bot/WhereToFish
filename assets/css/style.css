@@ -153,13 +153,13 @@
 .favorites-header {
     font-size: 150%;
     color: #9acf95;
-    margin: 0 0 3% 5%;
+    margin: 0 0 2% 5%;
 }
 
 .favorites-box {
     background-color: darkgray;
     width: 80%;
-    margin: 0 0 0 10%;
+    margin: 5% 0 0 10%;
     border-style: solid;
     padding: 2%;
 }
@@ -187,6 +187,25 @@
     .jumbo-searchbar {
         margin: 10px 10px 25px;
         width: 75%;
+    }
+    /*------------------------------account page*/
+    .account-header {
+        font-size: 350%;
+        margin: 5% 0 4% 0;
+    }
+    
+    .favorites-header {
+        font-size: 200%;
+    }
+    
+    .favorites-box {
+        width: 40%;
+        margin: 2% 0 0 6.5%;
+        padding: 2%;
+    }
+    
+    .fav-info {
+        font-weight: 600;
     }
 }
 
@@ -226,5 +245,32 @@
     .sign-up-submit {
         margin: 3% 0 15% 45%;
         width: 10%;
+    }
+
+    /*----------------------------Account*/
+
+    .account-header {
+        font-size: 400%;
+        color: #9acf95;
+        margin: 5% 0 3% 1%;
+    }
+    
+    .favorites-header {
+        font-size: 225%;
+        margin: 0 0 2% 3.5%;
+    }
+    
+    .favorites-box {
+        background-color: darkgray;
+        width: 30%;
+        margin: 2% 0 0 5%;
+    }
+    
+    .fav-info {
+        font-weight: 600;
+    }
+
+    #first-fav-box {
+        margin-left: 3%;
     }
 }
