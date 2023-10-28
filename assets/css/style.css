@@ -1,9 +1,5 @@
 /*-----------------------------------Colors*/
 
-body {
-    padding-bottom:10%
-}
-
 .bg-brown {
     background-color: #3d2f24;
 }
@@ -25,6 +21,16 @@ body {
     background-color: rgba(90, 90, 90, 0.6) ;
 }
 
+/*-----------------------------------Misc*/
+
+.hidden {
+    display: none;
+}
+
+body {
+    padding-bottom:10%
+}
+
 /*-----------------------------------Fonts*/
 .main-font {
     font-family: 'Quicksand', sans-serif;
@@ -37,10 +43,6 @@ body {
 /*-----------------------------------Navbar*/
 .nav-text {
     color: #9acf95;
-}
-
-.hidden {
-    display: none;
 }
 
 /*---------------------------------Main page*/
@@ -72,6 +74,15 @@ body {
 .jumbo-searchbar {
     margin: 10px;
     width: 95%;
+}
+
+/*------------------------------------Search*/
+
+.search-header {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 140%;
+    font-weight: 500;
 }
 
 /*------------------------------------Sign Up*/
@@ -114,36 +125,6 @@ body {
     width: 20%;
     background-color: #3d2f24;
     color: #9acf95;
-}
-
-/*------------------------------------Sign In*/
-
-.sign-in-header {
-    width: 100%;
-    margin: 15% 0 22% 0;
-    font-size: 150%;
-    font-weight: 600;
-    text-align: center;
-}
-
-.sign-in-inputs {
-    width: 100%;
-}
-
-.sign-in-un {
-    width: 70%;
-    margin-left: 15%;
-}
-
-.sign-in-pw {
-    width: 70%;
-    margin:20% 0 0 15%;
-}
-
-.sign-in-submit {
-    margin-top: 10%;
-    margin-left: 40%;
-    width: 20%;
 }
 
 /*------------------------------------Account*/
