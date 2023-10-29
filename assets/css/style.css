@@ -28,7 +28,7 @@
 }
 
 body {
-    padding-bottom:10%
+    padding-bottom:0;
 }
 
 /*-----------------------------------Fonts*/
@@ -228,8 +228,12 @@ body {
 
 @media (min-width: 992px) {
 
-    body {
+    .acc-body {
         padding-bottom: 5%;
+    }
+
+    .page-body {
+        padding-bottom: 1%;
     }
 
     /*------------------------------Jumbo*/
@@ -300,10 +304,6 @@ body {
     .search-header {
         margin-top: 3%;
         font-size: 220%;
-    }
-
-    .search-box {
-        padding-right: 0;
     }
 
     .search-bar {
