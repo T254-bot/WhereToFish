@@ -40,31 +40,34 @@
                 </div>
             </nav>
         </header>
-        <!--Page header and searchbar-->
-        <div class="container-fluid">
+        <!--Search bar-->
+        <section class="container-fluid">
             <div class="row">
                 <div class="col-12 search-header main-font">
                     <p>Type in a location to find fishing lakes nearby!</p>
                 </div>
             </div>
+            <!--searchbox and checkbox-->
             <div class="row">
-                <div class="col-12 search-box" id="na-search-box">
-                    <input type="text" placeholder="Search" class="rounded-4 sec-font search-bar-na">
-                </div>
-                <div class="col-6 col-lg-8 search-box na-hidden" id="a-search-box">
-                    <input type="text" placeholder="Search" class="rounded-4 sec-font search-bar">
-                </div>
-                <div class="col-6 col-lg-4 search-cb na-hidden">
-                    <input type="checkbox" id="search-checkbox" name="search-checkbox">
-                    <label for="search-checkbox" class="main-font search-cb-label">Use saved Location</label>
-                </div>
+                <form>
+                    <div class="col-12 search-box" id="na-search-box">
+                        <input type="text" placeholder="Search" class="rounded-4 sec-font search-bar-na">
+                    </div>
+                    <div class="col-6 col-lg-8 search-box na-hidden" id="a-search-box">
+                        <input type="text" placeholder="Search" class="rounded-4 sec-font search-bar">
+                    </div>
+                    <div class="col-6 col-lg-4 search-cb na-hidden">
+                        <input type="checkbox" id="search-checkbox" name="search-checkbox">
+                        <label for="search-checkbox" class="main-font search-cb-label">Use saved Location</label>
+                    </div>
+                </form>
             </div>
-        </div>
+        </section>
         <!--Maps-->
-        <div class="container-fluid">
+        <section class="container-fluid">
             <!--The div element for the map -->
             <div id="map"></div>
-        </div>
+        </section>
         <footer>
             <div class="container">
                 <div class="row bg-lgreen fixed-bottom footer-body">

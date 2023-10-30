@@ -2,10 +2,9 @@
 let map;
 
 async function initMap() {
-  // The location of Uluru
+  // The location of position
 const position = { lat: 51.507351, lng: -0.127758 };
   // Request needed libraries.
-  //@ts-ignore
 const { Map } = await google.maps.importLibrary("maps");
 const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
