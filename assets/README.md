@@ -19,6 +19,7 @@
 
 # Site Overview 
 
+Where to Fish is a website created to allow users to find fishing lakes within a set radius of a chosen location. It will achieve this by accessing the Google Maps API functionality. I also intend to allow users to create an account, which being logged into will trigger responsive changes throughout the site aswell as allowing users to favorite locations and view all of those favorites in one place. Rather than using an actual database, I am going to use the devices local storage to mock this. This is not only due to not yet having the required knowledge to use these databases to create user accounts, but also (and more so) due to wanting to use Javascript to achieve all of the desired responsiveness and functionality for my site.
 
 # Planning 
 
