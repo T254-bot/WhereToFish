@@ -139,13 +139,13 @@ body {
     color: #2f4f20;
 }
 
-.sign-up-inputs {
+.sign-up-form {
     width: 100%;
 }
 
-.sign-up-un {
+.sign-up-input{
     width: 70%;
-    margin-left: 15%;
+    margin: 0 0 5% 15%;
 }
 
 .sign-up-pw {
