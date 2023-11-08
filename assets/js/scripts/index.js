@@ -167,22 +167,21 @@ function initAutocomplete() {
     });
 
     map.fitBounds(bounds);
-
-    // Add code to find and mark fishing lakes within 5km.
-    findFishingLakes(map, places[0].geometry.location);
-  });
-}
-
-function findFishingLakes(map, location) {
-  // You should implement code to find fishing lakes within 5km of the 'location'.
-  // This may involve making an API request or using a database of fishing lake locations.
-
-  // Example: Mark a fishing lake within 5km.
-  const fishingLake = new google.maps.Marker({
-    map: map,
-    icon: 'fishing-lake-icon.png', // Use your custom fishing lake icon.
-    title: 'Fishing Lake',
-    position: { lat: location.lat() + 0.05, lng: location.lng() + 0.05 }, // Example coordinates.
+    
+    
+    const tylersLakeLatLng = { lat: 51.45714, lng: -2.10896 }
+    new google.maps.Marker({
+      position: tylersLakeLatLng,
+      map,
+      title: "Hello World!",
+    });
+    
+    const barnabysLakeLatLng = { lat: 51.45547, lng: -2.11769 };
+    new google.maps.Marker({
+      position: barnabysLakeLatLng,
+      map,
+      title: "Hello World!",
+    });
   });
 }
 
