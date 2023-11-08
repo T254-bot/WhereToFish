@@ -113,15 +113,6 @@
     display: none;
 }
 
-.content {
-    flex: 1 0 auto;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 0;
-}
 
 /*-----------------------------------Fonts*/
 .main-font {
@@ -287,7 +278,6 @@ footer {
     height: 10%;
     width: 100%;
     color: #3d2f24;
-    flex-shrink: 0;
 }
 
 .footer-disclaimer {
@@ -296,13 +286,11 @@ footer {
     font-size: 80%;
     font-weight: 500;
     margin: 2% 0 1% 0;
-    background-color: #9acf95;
 }
 
 .footer-text {
     margin-left: 2%;
     height: 20%;
-    background-color: #9acf95;
 }
 
 .footer-link {
