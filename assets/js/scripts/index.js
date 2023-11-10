@@ -81,23 +81,6 @@ async function initAutocomplete() {
         return;
       }
 
-    /*  const icon = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25),
-      };
-
-      // Create a marker for each place.
-      markers.push(
-        new google.maps.Marker({
-          map,
-          icon,
-          title: place.name,
-          position: place.geometry.location,
-        }),
-      );*/
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
         bounds.union(place.geometry.viewport);
@@ -124,12 +107,12 @@ async function initAutocomplete() {
       title: "Ivy House Lakes",
     },
     {
-      position: { lat: 34.823736, lng: -111.8001857 },
-      title: "Red Rock Crossing",
+      position: { lat: 51.454086, lng: -1.980778 },
+      title: "Penn Lake (Private)",
     },
     {
-      position: { lat: 34.800326, lng: -111.7665047 },
-      title: "Bell Rock",
+      position: { lat: 51.424945, lng: -2.200522 },
+      title: "Pockeridge Lake",
     },
   ];
   // Create an info window to share between markers.
