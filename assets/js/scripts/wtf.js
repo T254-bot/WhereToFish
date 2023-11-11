@@ -7,12 +7,29 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     var password = document.getElementById('sign-up-pw').value;
     var confirmPassword = document.getElementById('sign-up-cpw').value;
 
-// logs values to the consoles for testing
+// Validation checks
+    if (username.trim() === '' || email.trim() === '' || password.trim() === '' || confirmPassword.trim() === '') {
+        alert('Please fill in all fields.');
+        return;
+    }
+    
+    if (password !== confirmPassword) {
+        alert('Passwords do not match.');
+        return;
+    }
 
+// Log values to the console
     console.log('Username: ' + username);
     console.log('Email: ' + email);
     console.log('Password: ' + password);
-    console.log('Confirm Password: ' + confirmPassword);
+
+// Store values in local storage
+    localStorage.setItem('username', username);
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
+
+// Navigate to account.html
+    window.location.href = 'account.html';
 });
 
 
