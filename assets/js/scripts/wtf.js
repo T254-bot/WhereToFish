@@ -32,7 +32,7 @@ if (signupForm) {
         localStorage.setItem('password', password);
 
     // Takes user to account.html
-        //window.location.href = 'account.html';
+        window.location.href = 'account.html';
     });
 } else {
     console.log('signup form does not exist on this page')
@@ -43,8 +43,17 @@ document.addEventListener('DOMContentLoaded', function () {
     var storedUsername = localStorage.getItem('username');
 
     if (storedUsername) {
-        // If username exists, update the content of the element with id "add-username"
+        // If username exists, update the content of the page
         var addUsernameElement = document.getElementById('add-username');
+        var naHiddenElement = document.getElementById('na-hidden-element');
+        var aHiddenElement = document.getElementById('a-hidden-element');
+    
+        if (naHiddenElement && aHiddenElement) {
+            naHiddenElement.classList.remove('hidden');
+            aHiddenElement.classList.add('hidden');
+        } else {
+            console.log('Elements not found on this page.');
+        };
 
         if (addUsernameElement) {
             addUsernameElement.textContent = 'Welcome ' + storedUsername;
@@ -52,8 +61,8 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('Element with id "add-username" not found on this page.');
         }
     } else {
-        // If username doesn't exist, you might want to handle this case accordingly
-        console.log('Username not found in local storage');
+        // message for if username doesn't exist
+        console.log('User has not created an account');
     }
 });
 
