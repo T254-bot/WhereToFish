@@ -29,7 +29,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     localStorage.setItem('password', password);
 
 // Navigate to account.html
-    window.location.href = 'account.html';
+    //window.location.href = 'account.html';
 });
 
 

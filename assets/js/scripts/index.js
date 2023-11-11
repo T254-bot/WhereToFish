@@ -1,37 +1,30 @@
-// This example adds a search box to a map, using the Google Place Autocomplete
-// feature. People can enter geographical searches. The search box will return a
-// pick list containing a mix of places and predicted search terms.
-// This example requires the Places library. Include the libraries=places
-// parameter when you first load the API. For example:
-// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-async function initAutocomplete() {
-
-    // Request needed libraries.
-    const { Map, InfoWindow } = await google.maps.importLibrary("maps");
-    const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary(
-      "marker",
-    );
-
-  const map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 52.3555, lng: 1.1743 },
-    mapId: "4504f8b37365c3d0",
+function initMap() {
+  const map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: 52.479, lng: -1.267 },
     zoom: 6,
   });
-  // Create the search box and link it to the UI element.
-  const input = document.getElementById("pac-input");
-  const searchBox = new google.maps.places.SearchBox(input);
 
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-  // Bias the SearchBox results towards current map's viewport.
-  map.addListener("bounds_changed", () => {
+  const input = document.getElementById('search');
+  const searchBox = new google.maps.places.SearchBox(input);
+  map.addListener('bounds_changed', function () {
     searchBox.setBounds(map.getBounds());
   });
 
+  const geocoder = new google.maps.Geocoder();
   let markers = [];
+  let infoWindow = new google.maps.InfoWindow();
 
-  // Listen for the event fired when the user selects a prediction and retrieve
-  // more details for that place.
-  searchBox.addListener("places_changed", () => {
+  document
+    .getElementById('search')
+    .addEventListener('keypress', function (event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        // Call your function to handle the search
+        google.maps.event.trigger(this, 'places_changed');
+      }
+    });
+
+  searchBox.addListener('places_changed', function () {
     const places = searchBox.getPlaces();
 
     if (places.length == 0) {
@@ -39,80 +32,101 @@ async function initAutocomplete() {
     }
 
     // Clear out the old markers.
-    markers.forEach((marker) => {
-      marker.setMap(null);
-    });
+    markers.forEach((marker) => marker.setMap(null));
     markers = [];
 
-    // For each place, get the icon, name and location.
     const bounds = new google.maps.LatLngBounds();
 
     places.forEach((place) => {
-      if (!place.geometry || !place.geometry.location) {
-        console.log("Returned place contains no geometry");
+      if (!place.geometry) {
+        console.log('Returned place contains no geometry');
         return;
       }
 
+      const service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(
+        {
+          location: place.geometry.location,
+          radius: 8046, // 5 miles in meters
+          type: ['natural_feature'],
+        },
+        (results, status) => {
+          if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+            results.forEach((result) => {
+              console.log(result);
+
+              if (
+                result.name.toLowerCase().includes('fishing') ||
+                result.name.toLowerCase().includes('pond') ||
+                result.name.toLowerCase().includes('lake') ||
+                result.name.toLowerCase().includes('water')
+              ) {
+                const placeLoc = result.geometry.location;
+                const marker = new google.maps.Marker({
+                  map: map,
+                  position: placeLoc,
+                });
+                console.log(marker);
+                markers.push(marker);
+                bounds.extend(placeLoc);
+
+                console.log(markers);
+
+                // Reverse Geocoding to get the postal code
+                geocoder.geocode(
+                  { location: placeLoc },
+                  (geocodeResults, geocodeStatus) => {
+                    if (geocodeStatus === 'OK') {
+                      if (geocodeResults[0]) {
+                        const addressComponents =
+                          geocodeResults[0].address_components;
+                        const postalCodeItem = addressComponents.find(
+                          (component) => component.types.includes('postal_code')
+                        );
+                        const postalCode = postalCodeItem
+                          ? postalCodeItem.long_name
+                          : 'Not found';
+
+                        // Set the content of the InfoWindow
+                        marker.addListener('click', () => {
+                          const contentString = `
+                        <div>
+                          <strong>${result.name}</strong><br>
+                          Location: ${placeLoc.lat()}, ${placeLoc.lng()}<br>
+                          Postal Code: ${postalCode}<br>
+                          ${
+                            result.photos
+                              ? `<img src="${result.photos[0].getUrl({
+                                  maxWidth: 200,
+                                  maxHeight: 200,
+                                })}" alt="Place Image">`
+                              : ''
+                          }
+                        </div>`;
+                          infoWindow.setContent(contentString);
+                          infoWindow.open(map, marker);
+                        });
+                      }
+                    } else {
+                      console.log('Geocoder failed due to: ' + geocodeStatus);
+                    }
+                  }
+                );
+              }
+            });
+
+            map.fitBounds(bounds);
+          }
+        }
+      );
+
       if (place.geometry.viewport) {
-        // Only geocodes have viewport.
         bounds.union(place.geometry.viewport);
       } else {
         bounds.extend(place.geometry.location);
       }
     });
-    map.fitBounds(bounds); 
-
-  // Set LatLng and title text for the markers. The first marker (Boynton Pass)
-  // receives the initial focus when tab is pressed. Use arrow keys to
-  // move between markers; press tab again to cycle through the map controls.
-  const lakes = [
-    {
-      position: { lat: 51.428378, lng: -1.967357 },
-      title: "Sabre Lake",
-    },
-    {
-      position: { lat: 51.524694, lng: -1.963691 },
-      title: "Tockenham Reservior",
-    },
-    {
-      position: { lat: 51.545062, lng: -1.942813 },
-      title: "Ivy House Lakes",
-    },
-    {
-      position: { lat: 51.454086, lng: -1.980778 },
-      title: "Penn Lake (Private)",
-    },
-    {
-      position: { lat: 51.424945, lng: -2.200522 },
-      title: "Pockeridge Lake",
-    },
-  ];
-  // Create an info window to share between markers.
-  const infoWindow = new InfoWindow();
-
-  // Create the markers.
-  lakes.forEach(({ position, title }, i) => {
-    const pin = new PinElement({
-      glyph: `${i + 1}`,
-    });
-    const marker = new AdvancedMarkerElement({
-      position,
-      map,
-      title: `${i + 1}. ${title}`,
-      content: pin.element,
-    });
-
-    // Add a click listener for each marker, and set up the info window.
-    marker.addListener("click", ({ domEvent, latLng }) => {
-      const { target } = domEvent;
-
-      infoWindow.close();
-      infoWindow.setContent(marker.title);
-      infoWindow.open(marker.map, marker);
-    });
-  });
-
   });
 }
 
-window.initAutocomplete = initAutocomplete;
+google.maps.event.addDomListener(window, 'load', initMap);
