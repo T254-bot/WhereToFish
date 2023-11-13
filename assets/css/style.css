@@ -252,9 +252,10 @@
 }
 
 .favorites-header {
-    font-size: 150%;
+    font-size: 120%;
     color: #9acf95;
-    margin: 0 0 2% 5%;
+    margin: 10% 0 2% 5%;
+    text-align: center
 }
 
 .favorites-box {
@@ -456,8 +457,8 @@ footer {
     }
     
     .favorites-header {
-        font-size: 225%;
-        margin: 0 0 2% 3.5%;
+        font-size: 150%;
+        margin: 8% 0 2% 3.5%;
     }
     
     .favorites-box {
