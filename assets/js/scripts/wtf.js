@@ -31,15 +31,19 @@ if (signupForm) {
         localStorage.setItem('email', email);
         localStorage.setItem('password', password);
 
-    // Takes user to account.html
-        window.location.href = 'account.html';
-    });
-
-    // Sends confirmation email to users inputted address  
-    emailjs.send("service_udzvhfn","template_kdeu3pk",{
-        to_name: localStorage.getItem('username'),
-        reply_to: localStorage.getItem('email'),
+    // Sends confirmation email to the user's inputted address  
+        emailjs.send("service_udzvhfn", "template_kdeu3pk", {
+            to_name: localStorage.getItem('username'),
+            to_email: localStorage.getItem('email'),
+        })
+        .then(function(response) {
+            console.log('Email sent:', response);
+            window.location.href = 'account.html';
+        })
+        .catch(function(error) {
+            console.error('Email did not send:', error);
         });
+    });
 
 } else {
     console.log('signup form does not exist on this page')
