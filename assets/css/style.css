@@ -108,10 +108,11 @@
     display: none;
 }
 
-.na-hidden {
-    display: none;
+.bg-picture {
+    background-image: url('../images/wtf-bg\(M\).jpg');
+    background-repeat: no-repeat;
+    height: 1000px;
 }
-
 
 /*-----------------------------------Fonts*/
 .main-font {
@@ -165,12 +166,11 @@
     margin: 0;
 }
 
-.jumbo-search-btn {
+.jumbo-search {
     margin: 10px;
     width: 30%;
-    background-color: #9acf95;
-    color: #3d2f24;
     border-width: 3px;
+    text-align: center;
 }
 
 /*------------------------------------Search*/
@@ -282,10 +282,6 @@
     margin: 0;
 }
 /*------------------------------------Footer*/
-footer {
-    margin-top: auto;
-    width: 100%;
-}
 
 .footer-body {
     height: 10%;
@@ -322,7 +318,7 @@ footer {
         width: 60%;
     }
 
-    .jumbo-searchbar {
+    .jumbo-search {
         margin: 10px;
         width: 75%;
     }

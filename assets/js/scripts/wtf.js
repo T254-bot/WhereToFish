@@ -100,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var naHiddenElement = document.getElementById('na-hidden-element');
         var aHiddenElement = document.getElementById('a-hidden-element');
     
+        // Replaces sign up on navbar with account after user submits sign up form
         if (naHiddenElement && aHiddenElement) {
             naHiddenElement.classList.remove('hidden');
             aHiddenElement.classList.add('hidden');
