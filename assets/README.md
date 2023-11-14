@@ -25,16 +25,15 @@ Where to Fish is a website created to allow users to find fishing lakes within a
 
 ## Target Audiences:
 
+* Users who are new to fishing
+* Users who are looking for new fishing lakes
+* Users who have experience fishing 
 
 ### User Stories:
 
 * As a user I want to understand the sites purpose.
 
 * As a user I want to find fishing lakes around my area.
-
-* As a user I want to be able to save my favorite fishing lakes and view them all in one place .
-
-* As a user I want to be able to use a saved location for my searches.
 
 * As a user I want to be able to update my saved details easily.
 
