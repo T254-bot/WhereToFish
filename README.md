@@ -45,7 +45,7 @@ When choosing the colors, I wanted the design of my site to mimic the visual exp
 
 Below is a grid that I have used to check the contrast scores so as to be sure all text remains readable throughout the site, created on https://contrast-grid.eightshapes.com/ .
 
-![Color grid screenshot](docs/screenshots/wtf-colors.png)
+![Color grid screenshot](assets/docs/screenshots/wtf-colors.png)
 
 * The only color combinations used are those that pass.
 
@@ -53,19 +53,19 @@ Below is a grid that I have used to check the contrast scores so as to be sure a
 
 Here are my wireframes that I created at the start of my project and used as the rough template for my site, for mobile, tablet and desktop viewing. Below them you will find a list detailing how the design has changed as the development process was going on. More information on why these changes where made will be found below.
 
-![Index.html Wireframe](docs/screenshots/wtf-index-wf.png)
+![Index.html Wireframe](assets/docs/screenshots/wtf-index-wf.png)
 
 * The only real design changes to the home page are that the search bar found in the jumbotron has been replaced on the working site by a simple button. This was due to time constraints.
 
-![Search.html Wireframe](docs/screenshots/wtf-search-wf.png)
+![Search.html Wireframe](assets/docs/screenshots/wtf-search-wf.png)
 
-![Sign-up.html Wireframe](docs/screenshots/wtf-signup-wf.png)
+![Sign-up.html Wireframe](assets/docs/screenshots/wtf-signup-wf.png)
 
 * The sign up form found on the site does not have first and last name fields as they where not required at all at this stage in the sites development. 
 
 * There was no wireframe created for the change details page found through the account page, but the design is almost exactly the same as sign-up.html.
 
-![Account.html wireframe](docs/screenshots/wtf-account-wf.png)
+![Account.html wireframe](assets/docs/screenshots/wtf-account-wf.png)
 
 * The design and structure of the account page has remained the same as the wireframe, however the functionality I was planning on adding (see more in the features section below) was scrapped. Therefore at this time other than the interactive welcome message and link to change-details.html, the only content on the page unfortunately is text displayed to inform the user that there is no content to see.
 
@@ -102,7 +102,7 @@ Below you will find a list of the features currently found on the site, and also
 I began testing the responsiveness of the site firstly by switching through different device screen sizes using developer tools on google chrome on each page and using every feature at each main breakpoint. Below you will find a screenshot of the full list of the device screen sizes used.
 
 * List of device screen-sizes used in dev tools:
-![Dev device list](docs/screenshots/wtf-device-list.png)
+![Dev device list](assets/docs/screenshots/wtf-device-list.png)
 
 ### I have tried to test the website on as many devices as I can, however, I don't have access to many. here I will include a list of all the devices that I have been to use to test the site:
 * ASUS Zenbook Duo 14 ^
@@ -128,30 +128,30 @@ I began testing the responsiveness of the site firstly by switching through diff
 
 * After putting my js into JSLint I am pleased to say there where no major issues, however lots of warning where present. This is due to a failure of the learning materials. For instance I was lead to believe that as long as we where consistent, the use of double quotes and single quotes is interchangeable. This is not the case for JSLint as that was one of three recurring warnings that I was totally unaware that I should have been looking out for, these being lines over 80 characters and spaces between blocks of code, that are there for readability. The only other warning is JSLint claims things such as console in console.log(), or document in document.getElementById() are undefined.
 
-![JSLint Results](docs/screenshots/wtf-jslint.png)
+![JSLint Results](assets/docs/screenshots/wtf-jslint.png)
 
 ### HTML Validator:
 
 * Home page:
-![index.html validator results](docs/screenshots/wtf-home.png)
+![index.html validator results](assets/docs/screenshots/wtf-home.png)
 
 * Search page: 
-![search.html validator results](docs/screenshots/search-wtf.png)
+![search.html validator results](assets/docs/screenshots/search-wtf.png)
 * section without heading is the container for the map div which contains no text (at least no text from the pages html) therefore no heading can be placed.
 
 * Account page:
-![account.html validator results](docs/screenshots/account-wtf.png)
+![account.html validator results](assets/docs/screenshots/account-wtf.png)
 
 * Sign up page: 
-![sign-up.html validator results](docs/screenshots/su-wtf.png)
+![sign-up.html validator results](assets/docs/screenshots/su-wtf.png)
 
 * Change details:
-![change-details.html validator results](docs/screenshots/)
+![change-details.html validator results](assets/docs/screenshots/)
 
 
 ### CSS Validator Results:
 
-![CSS validator results](docs/screenshots/wtf-css.png)
+![CSS validator results](assets/docs/screenshots/wtf-css.png)
 
 ## Functionality Testing:
 
@@ -195,7 +195,7 @@ I began testing the responsiveness of the site firstly by switching through diff
     * From the source section drop-down menu, select the Main Branch.
     * Once the main branch has been selected, the page will refresh and provide a link to the live project.
 
-![Site deployment](docs/screenshots/wtf-deploy.png)
+![Site deployment](assets/docs/screenshots/wtf-deploy.png)
 The live link can be found here - https://t254-bot.github.io/WhereToFish/
 
 # Credits
