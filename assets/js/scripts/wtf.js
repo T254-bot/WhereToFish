@@ -118,3 +118,14 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('User has not created an account');
     }
 });
+
+// Function to allow user to navigate to search page using the button provided
+let jumboButton = document.getElementById('jumbo-btn');
+if (jumboButton) {
+    document.getElementById('jumbo-btn').addEventListener('click', function(event) {
+        window.location.href = 'search.html';
+    })
+} else {
+    console.log('Jumbo button not found on this page')
+};
+

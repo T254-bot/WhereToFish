@@ -160,11 +160,10 @@
     margin: 0;
 }
 
-.jumbo-search {
+#jumbo-btn {
+    background-color: #9acf95;
+    color: #3d2f24;
     margin: 10px;
-    width: 30%;
-    border-width: 3px;
-    text-align: center;
 }
 
 /*------------------------------------Search*/
@@ -312,10 +311,6 @@
         width: 60%;
     }
 
-    .jumbo-search {
-        margin: 10px;
-        width: 75%;
-    }
     
     /*----------------------------- change details*/
     .cdetails-message {
