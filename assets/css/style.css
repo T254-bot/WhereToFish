@@ -108,12 +108,6 @@
     display: none;
 }
 
-.bg-picture {
-    background-image: url('../images/wtf-bg\(M\).jpg');
-    background-repeat: no-repeat;
-    height: 1000px;
-}
-
 /*-----------------------------------Fonts*/
 .main-font {
     font-family: 'Quicksand', sans-serif;
@@ -414,6 +408,7 @@
         font-size: 500%;
         margin-bottom: 5px;
     }
+
     /*------------------------------Sign Up*/
 
     .sign-up-header {
