@@ -169,12 +169,14 @@ I began testing the responsiveness of the site firstly by switching through diff
 
 * As a user I want to understand the sites purpose.
     * Upon landing on the home page, the user is greeted with a 'jumbotron' in the center of the page which informs the user of the sites purpose and invites them to continue into the site.
+    ![Jumbo screenshot](assets/docs/screenshots/wtf-j-us.png)
 
 * As a user I want to find fishing lakes around my area.
     * After reading the greeting on the home page, the user clicks on the indicated button which takes them to search.html. There they find the map and search bar with a small bit of text informing the user of what to do next.
-
+    ![Search bar screenshot](assets/docs/screenshots/wtf-s-us.png)
 * As a user I want to be able to update my saved details easily.
     When the user inputs their data via the sign up form, they are immediately taken to account.html. At the top of the page they will see text with a link inside, from there they can navigate to change-details.html and are presented with another form. 
+    ![Change details link screenshot](assets/docs/screenshots/wtf-cd-us.png)
 
 ## Bug Report:
 
